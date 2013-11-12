@@ -1,0 +1,116 @@
+html, body {
+	margin: 0; padding: 0;
+	font-family: HelveticaNeue, sans-serif;
+	background: #efefef;
+}
+
+
+#header {
+	background: silver;
+	clear: right;
+	margin-bottom: 20px;
+	padding: 10px 20px;
+}
+
+.pages {
+	margin: 0 auto;
+	width: 14.8cm;	
+	.print & {
+		width: 21cm;
+	}
+	.page {
+		background: white;
+		overflow: hidden;
+		width: 14.8cm;
+		height: 21cm;
+		outline: 1px dotted silver;
+		padding: 2em;
+		box-sizing: border-box;
+		body.print & {
+			-webkit-transform: rotate(90deg);
+			-webkit-transform-origin: 10.5cm;
+			margin: 0 0 -6.2cm 0;
+		}	
+
+		header {
+			text-align: center;
+			> p {
+				padding: .5em 2em;
+				border: 2pt solid black;
+				background: white;
+				text-transform: uppercase;
+				display: inline-block;
+				border-radius: .5cm;
+				margin-bottom: -1em;
+				margin-top: 0;
+				display: none;
+			}
+			.logo {
+				font-weight: normal;
+				background: black; 
+				color: white;
+				padding: .5em 1em;
+				text-align: center;
+				border-radius: .5cm;
+				font: 36pt Courier;
+				margin: 0;
+				span {
+					font-weight: bold;
+				}
+			}			
+		}
+
+	}
+}
+
+
+
+
+
+
+
+.buttons {
+	overflow: hidden;
+	input {
+		display: none;
+	}
+
+	button {
+		outline: none;
+		margin: 0;
+		border: none;
+		
+		padding: 1em 2em;
+		background: #efefef;
+	}
+	label {
+		float: left;
+		&:nth-child(1) button {
+			border-radius: 5px 0 0 5px;
+		}
+		&:nth-child(2) button {
+			border-radius: 0 5px 5px 0;
+		}
+	}
+	:checked + button {
+		background: gray;
+	}
+}
+
+@page {
+	size: A5
+}
+
+@media print {
+	html, body {
+		background: none;
+	}
+	.pages .page {
+		outline: none;
+		margin: 0 0 -6.2cm 0;
+		// right: 3.1cm;
+	}
+	#header {
+		display: none;
+	}
+}
