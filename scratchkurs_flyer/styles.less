@@ -1,13 +1,17 @@
-html, body {
-	margin: 0; padding: 0;
-	font-family: HelveticaNeue, sans-serif;
-	background: #efefef;
+html {
+	font-size: 16px;
 }
 
+body {	
+	font-family: HelveticaNeue, sans-serif;	
+	html, & {
+		margin: 0; padding: 0;	
+		background: #efefef;
+	}
+}
 
 #header {
 	background: silver;
-	clear: right;
 	margin-bottom: 20px;
 	padding: 10px 20px;
 }
@@ -19,6 +23,7 @@ html, body {
 		width: 21cm;
 	}
 	.page {
+		font-family: 'Anaheim', sans-serif;
 		background: white;
 		overflow: hidden;
 		width: 14.8cm;
@@ -32,6 +37,22 @@ html, body {
 			margin: 0 0 -6.2cm 0;
 		}	
 
+		.scratchlogo {
+			// position: relative;
+			// top: .2cm;
+			width: 1.8cm;
+			height: .6cm;
+			background: url(Scratch-logo-outline.png) 0 0 no-repeat;
+			background-size: 100% auto;			
+			display: inline-block;
+			visibility: invisible;
+		}
+
+		.important {
+			font-size: 1.4rem;
+			font-family: Unkempt, sans-serif;
+		}
+
 		header {
 			text-align: center;
 			> p {
@@ -43,7 +64,7 @@ html, body {
 				border-radius: .5cm;
 				margin-bottom: -1em;
 				margin-top: 0;
-				display: none;
+				//display: none;
 			}
 			.logo {
 				font-weight: normal;
@@ -60,12 +81,38 @@ html, body {
 			}			
 		}
 
+		footer {
+			& > p {
+				margin: 0;
+			}
+			border: 1px solid gray;
+			border-radius: .5cm;
+			padding: .5cm;
+			dd {
+				margin: 0;
+			}
+			dl {
+				margin: .3cm 0;
+			}
+			small {
+				p {
+					margin: 0;
+				}
+			}
+			.col2 {
+				-webkit-column-count: 2;
+				//background: yellow;
+			}
+		}
+
 	}
 }
 
 
 
-
+.nobreak {
+	white-space: nowrap;
+}
 
 
 
