@@ -37,6 +37,16 @@ body {
 			margin: 0 0 -6.2cm 0;
 		}	
 
+		a {
+			color: black;
+		}
+
+		.qr {
+			float: right;
+			position: relative;
+			top: -.9cm;
+		}
+
 		.scratchlogo {
 			// position: relative;
 			// top: .2cm;
@@ -51,6 +61,11 @@ body {
 		.important {
 			font-size: 1.4rem;
 			font-family: Unkempt, sans-serif;
+		}
+
+		p {			
+			margin-bottom: .8em;
+			margin-top: 0;
 		}
 
 		header {
@@ -78,7 +93,8 @@ body {
 				span {
 					font-weight: bold;
 				}
-			}			
+			}
+			margin-bottom: .5cm;			
 		}
 
 		footer {
@@ -89,20 +105,30 @@ body {
 			border-radius: .5cm;
 			padding: .5cm;
 			dd {
-				margin: 0;
+				margin: 0;					
 			}
 			dl {
-				margin: .3cm 0;
+				margin: .3cm 1cm .3cm 0;
+				float: left;
+				// &:nth-child(odd) {
+				// 	position: absolute;
+				// 	left: 50%;
+				// }
+			}
+			dt {
+				
 			}
 			small {
+				clear: left;
+				display: block;
 				p {
 					margin: 0;
 				}
 			}
-			.col2 {
-				-webkit-column-count: 2;
-				//background: yellow;
-			}
+			// .col2 {
+			// 	-webkit-column-count: 2;
+			// 	//background: yellow;
+			// }
 		}
 
 	}
